@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Global } from '@emotion/react';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { reset } from './Style/Global/reset';
+import Todo from './Pages/Todo/Todo'
+import { Navigation } from "react-minimal-side-navigation/lib";
+import 'react-minimal-side-navigation/lib/ReactMinimalSideNavigation.css';
+import { HiHome } from 'react-icons/hi';
+import Menue from './Components/Menue/Menue';
+import { useNavigate } from 'react-router-dom';
+import { IoIosList } from 'react-icons/io';
+import Container from './Components/Container/Container';
 
-function App() {
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <> 
+      <Global style={reset} />
+      <Container/>
+   </>
   );
-}
+};
 
 export default App;
